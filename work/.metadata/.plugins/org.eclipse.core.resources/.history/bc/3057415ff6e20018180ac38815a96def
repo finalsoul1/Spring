@@ -1,0 +1,11 @@
+package com.example.demo.ioc.review;
+
+public class Test {
+	public static void main(String[] args) {
+		
+		TeamManager manager = new TeamManager();
+//		manager.setWorker(new Designer());
+		
+		manager.order();
+	}
+}

@@ -1,0 +1,13 @@
+package com.example.demo.ioc.step2;
+
+public class Test {
+
+	// 왜 프레임워크를 사용하는가?
+	// 차 안타고 걸어다녀도 된다
+	public static void main(String[] args) {
+		OrderManager manager = new OrderManager();
+		
+		manager.order();
+	}
+
+}

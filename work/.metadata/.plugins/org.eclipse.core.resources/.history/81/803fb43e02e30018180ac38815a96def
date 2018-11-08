@@ -1,0 +1,8 @@
+package com.example.demo.replacer;
+
+import lombok.Data;
+
+@Data
+public class Magician {
+	private MagicBox box;
+}

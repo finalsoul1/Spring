@@ -1,0 +1,14 @@
+package com.example.demo.scope;
+
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
+
+import lombok.Data;
+
+@Component("car2")
+@Scope("prototype")
+@Data
+public class Car {
+	private String name;
+	private String maker;
+}

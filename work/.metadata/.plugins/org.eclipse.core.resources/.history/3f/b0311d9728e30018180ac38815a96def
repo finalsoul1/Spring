@@ -1,0 +1,9 @@
+package com.example.demo.qualifier;
+
+public class Service3 implements TheService {
+
+	@Override
+	public void TheService() {
+		System.out.println("3번");
+	}
+}

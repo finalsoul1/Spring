@@ -1,0 +1,9 @@
+package com.example.demo.ioc.step1;
+
+public class HyundaiMaker {
+	public Car sell(Money money) {
+		Car car = new Car("Sonata");
+
+		return car;
+	}
+}

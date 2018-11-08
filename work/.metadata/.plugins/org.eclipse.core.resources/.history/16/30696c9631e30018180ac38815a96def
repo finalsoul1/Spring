@@ -1,0 +1,11 @@
+package com.example.demo.proxy.step2;
+
+public class Proxy implements Hello {
+	
+	@Override
+	public void say() {
+		// Primary Concern: 언제나 실행되어야 하는 로직
+		System.out.println("핵심로직: Hello~!!!");
+	}
+	
+}

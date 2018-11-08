@@ -1,0 +1,14 @@
+package com.example.demo.ioc.review.anno;
+
+import org.springframework.stereotype.Component;
+
+import lombok.Data;
+
+@Component
+@Data
+public class Programmer implements Employee {
+	@Override
+	public void work() {
+
+	}
+}

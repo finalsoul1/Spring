@@ -1,0 +1,18 @@
+package com.example.demo.proxy.step1;
+
+public class Test { // Client
+	/*
+	 * Client가 Service가 가져야 할 로직을 갖고 있으면 SRP원칙에 위반됩니다.
+	 */
+	public static void main(String[] args) {
+		Hello hello = new HelloImpl(); // Service
+		
+		hello.say();
+		
+		System.out.println();
+		
+//		System.out.println("-------------------");
+		hello.say();
+//		System.out.println("===================");
+	}
+}

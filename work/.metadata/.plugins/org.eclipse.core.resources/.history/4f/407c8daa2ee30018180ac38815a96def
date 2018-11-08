@@ -1,0 +1,16 @@
+package com.example.demo.proxy.step1;
+
+public class Test { // Client
+	
+	public static void main(String[] args) {
+		Hello hello = new HelloImpl(); // Service
+		
+		hello.say();
+		
+		System.out.println();
+		
+		System.out.println("-------------------");
+		hello.say();
+		System.out.println("===================");
+	}
+}

@@ -1,0 +1,14 @@
+package com.example.demo.qualifier;
+
+import java.util.List;
+
+public class TheClientBean {
+
+	
+	
+	private List<TheService> list;
+	
+	public static void main(String[] args) {
+		
+	}
+}

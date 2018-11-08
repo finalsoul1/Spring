@@ -1,0 +1,24 @@
+package com.example.demo.lombok_step1;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.NonNull;
+import lombok.RequiredArgsConstructor;
+
+@Data // 멤버변수에 private를 붙이면 그와 관련된걸 처리한다.
+@NoArgsConstructor // 파라미터를 안받는 생성자
+@RequiredArgsConstructor
+@AllArgsConstructor
+public class Member {
+	@NonNull private int id;
+	@NonNull private String name;
+	private String email;		
+	
+	public static void main(String[] args) {
+		Member member = new Member();
+		
+		
+	}
+	
+}

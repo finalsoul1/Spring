@@ -1,0 +1,9 @@
+package com.example.demo.scope;
+
+import lombok.Data;
+
+@Data
+public class Car {
+	private String name;
+	private String maker;
+}

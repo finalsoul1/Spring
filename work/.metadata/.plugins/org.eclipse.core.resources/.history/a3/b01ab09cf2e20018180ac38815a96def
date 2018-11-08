@@ -1,0 +1,9 @@
+package com.example.demo.ioc.review;
+
+public class Programmer implements Employee {
+	@Override
+	public void work() {
+		// TODO Auto-generated method stub
+
+	}
+}

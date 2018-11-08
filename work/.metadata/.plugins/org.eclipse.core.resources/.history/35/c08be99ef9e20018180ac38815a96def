@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="designer" class="com.example.demo.ioc.review.Designer"></bean>
+	<bean id="programmer" class="com.example.demo.ioc.review.Programmer"></bean>
+	
+	<bean id="manager1" class="com.example.demo.ioc.review.TeamManager">
+		<property name="worker" ref="programmer"></property>
+	</bean>
+	
+	<bean id="manager2" class="com.example.demo.ioc.review.TeamManager">
+		<constructor-arg ref="designer"></constructor-arg>
+	</bean>
+	
+	<!-- <bean id="manager2" class="com.example.demo.ioc.review.TeamManager">
+		<constructor-arg ref="designer"></constructor-arg>
+	</bean> -->
+
+</beans>

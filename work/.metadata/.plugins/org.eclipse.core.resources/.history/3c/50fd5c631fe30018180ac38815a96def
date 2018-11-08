@@ -1,0 +1,12 @@
+package com.example.demo.scope;
+
+import org.springframework.context.annotation.Scope;
+
+import lombok.Data;
+
+@Scope("prototype")
+@Data
+public class Car {
+	private String name;
+	private String maker;
+}

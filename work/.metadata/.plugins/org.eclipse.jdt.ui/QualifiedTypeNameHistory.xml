@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="com.example.demo.lombok_step1.User"/>
+<fullyQualifiedTypeName name="lombok.NonNull"/>
+<fullyQualifiedTypeName name="lombok.RequiredArgsConstructor"/>
+<fullyQualifiedTypeName name="com.example.demo.lombok_step1.Member"/>
+<fullyQualifiedTypeName name="com.example.demo.lombok_step1.Emp"/>
+<fullyQualifiedTypeName name="lombok.ToString"/>
+<fullyQualifiedTypeName name="lombok.EqualsAndHashCode"/>
+<fullyQualifiedTypeName name="lombok.Data"/>
+<fullyQualifiedTypeName name="com.example.demo.ioc.step1.Car"/>
+<fullyQualifiedTypeName name="com.example.demo.ioc.step1.HyundaiMaker"/>
+<fullyQualifiedTypeName name="com.example.demo.ioc.step1.Money"/>
+<fullyQualifiedTypeName name="com.example.demo.ioc.step1.OrderManager"/>
+<fullyQualifiedTypeName name="java.lang.Override"/>
+<fullyQualifiedTypeName name="com.example.demo.ioc.step2.CarMaker"/>
+<fullyQualifiedTypeName name="com.example.demo.ioc.step2.HyundaiMaker"/>
+<fullyQualifiedTypeName name="com.example.demo.ioc.step2.KiaMaker"/>
+<fullyQualifiedTypeName name="org.springframework.context.support.ClassPathXmlApplicationContext"/>
+<fullyQualifiedTypeName name="org.springframework.context.ApplicationContext"/>
+<fullyQualifiedTypeName name="lombok.AllArgsConstructor"/>
+<fullyQualifiedTypeName name="lombok.NoArgsConstructor"/>
+<fullyQualifiedTypeName name="javax.annotation.Resource"/>
+<fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+</qualifiedTypeNameHistroy>

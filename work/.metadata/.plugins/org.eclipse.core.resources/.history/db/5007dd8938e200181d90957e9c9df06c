@@ -1,0 +1,18 @@
+package com.example.demo.lombok_step1;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+@AllArgsConstructor
+public class Emp {
+	private int empno;
+	private String ename;
+	private String job;
+	
+	public Emp() {
+		
+	}
+}

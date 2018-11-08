@@ -1,0 +1,34 @@
+package com.example.demo.ioc.review;
+
+/*
+ * TeamManager use Employee.
+ * TeamManager has Employee.
+ * TeamManager depends Employee.
+ */
+
+public class TeamManager {
+//	private Employee worker = new Programmer();
+//	private Employee worker = new Designer();
+
+//	@Resource(name="programmer")
+	private Employee worker;
+	
+	public TeamManager() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	public TeamManager(Employee worker) {
+		this.worker=worker;
+	}
+
+	public void order() {
+		System.out.println("TeamManager가 " + worker.getClass().getSimpleName() + "에게 일을 시킨다.");
+		worker.work();
+	}
+
+	
+	public void setWorker(Employee worker) {
+		this.worker = worker;
+	}	
+	
+}

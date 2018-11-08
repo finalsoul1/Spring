@@ -1,0 +1,6 @@
+package com.example.demo.replacer;
+
+public class Magician {
+	private MagicBox box;
+
+}

@@ -1,0 +1,21 @@
+package com.example.demo.proxy.step3;
+
+import java.lang.reflect.Proxy;
+
+
+public class Test { // Client
+	
+	public static void main(String[] args) {
+		
+		Hello hello = new HelloImpl(); // Service
+		
+		hello.say();
+		
+		System.out.println();
+
+//		Hello proxy = new Proxy(hello);
+//		proxy.say();
+		
+		Proxy.newProxyInstance(Hello.class.getClassLoader(), new Class[] {Hello.class}, new MyAdvice());
+	}
+}

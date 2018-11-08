@@ -1,0 +1,37 @@
+package com.example.demo.ioc.review.java;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+import com.example.demo.ioc.step7.CarMaker;
+import com.example.demo.ioc.step7.HyundaiMaker;
+import com.example.demo.ioc.step7.KiaMaker;
+import com.example.demo.ioc.step7.OrderManager;
+
+@Configuration
+public class EmpConfig {
+	@Bean
+	public Employee designer() {
+		CarMaker maker = new Designer();
+		return maker;
+	}
+
+	@Bean
+	public Employee programmer() {
+		CarMaker maker = new Programmer();
+		return maker;
+	}
+
+	@Bean
+	public OrderManager manager1() {
+		OrderManager manager = new OrderManager();
+		manager.setMaker(designer());
+		return manager;
+	}
+	@Bean
+	public OrderManager manager2() {
+		OrderManager manager = new OrderManager();
+		manager.setMaker(programmer());
+		return manager;
+	}
+}
