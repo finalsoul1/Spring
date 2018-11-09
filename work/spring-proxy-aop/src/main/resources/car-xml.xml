@@ -19,6 +19,4 @@
 		<aop:advisor advice-ref="safetyBeltCheckAdvice" pointcut-ref="pointcut" />
 	</aop:config>
 
-
-
 </beans>
