@@ -14,13 +14,10 @@ public class Test {
 
 		Car luxuryCar = context.getBean("luxuryCar", Car.class);
 
-		for (int i = 0; i < 3; i++) {
-			try {
-				luxuryCar.start();
-			} catch (Exception e) {
-			}
-			luxuryCar.stop();
-		}
+		luxuryCar.start();
+		luxuryCar.start();
+		luxuryCar.start();
+		luxuryCar.stop();
 	}
 
 }
