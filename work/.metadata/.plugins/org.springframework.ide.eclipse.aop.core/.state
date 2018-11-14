@@ -2,6 +2,7 @@
 <aop-reference-model>
 <aop-project name="spring-jdbc-1"/>
 <aop-project name="spring-jdbc-2"/>
+<aop-project name="spring-jdbc-3"/>
 <aop-project name="spring-proxy-aop"/>
 <aop-project name="spring-boot-test"/>
 <aop-project name="spring-xml-to-java"/>

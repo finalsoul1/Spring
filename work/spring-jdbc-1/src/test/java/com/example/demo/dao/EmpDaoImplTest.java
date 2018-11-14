@@ -17,12 +17,12 @@ import com.example.demo.model.Emp;
 @RunWith(SpringJUnit4ClassRunner.class)
 // 테스트를 위한 빈 컨테이너 설정파일을 통보한다.
 // file: 파일의 기준위치는 자바측이 아니라 웹 루트 밑이다라고 구분해준다.
-@ContextConfiguration(locations= {"file:src/main/webapp/WEB-INF/spring/root-context.xml"})
+@ContextConfiguration(locations = { "file:src/main/webapp/WEB-INF/spring/root-context.xml" })
 public class EmpDaoImplTest {
 
 	@Autowired
 	private EmpDao empDao;
-	
+
 	@Test
 	public void test() {
 		fail("Not yet implemented");
@@ -30,19 +30,33 @@ public class EmpDaoImplTest {
 
 	@Test
 	public void testInsert() {
+		
+		int oldCount = empDao.count();
+		System.out.println("oldCount = " + oldCount);
+		
 		// given: 무엇이 주어진 상황에서
-		
 		// when: 무엇을 변경할 때
-		
 		// then: 무슨 결과를 얻어야 한다.
-				
+
 		Emp emp = new Emp();
 		emp.setEmpno(3201);
 		emp.setEname("홍길동");
 		emp.setJob("도둑");
 		emp.setSal(999);
-		int affected = empDao.insert(emp);
-		System.out.println("affected = " + affected);
+
+		try {
+			int affected = empDao.insert(emp);
+			System.out.println("affected = " + affected);
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
+		
+		int nowCount = empDao.count();
+		System.out.println("nowCount = " + nowCount);
+		
+		assertEquals("insert 메소드에서 예외발생, 트랜잭션 어드바이스 적용, " + "롤백이 되어야 하기 때문에 "
+				+ "oldCount 값과 nowCount 값은 같아야 한다.", oldCount,	nowCount);
+
 	}
 
 	@Test
@@ -54,18 +68,18 @@ public class EmpDaoImplTest {
 	public void testDelete() {
 		fail("Not yet implemented");
 	}
-	
+
 	@Test
 	public void testFindAll() {
 		List<Emp> emps = empDao.findAll();
-		
+
 		System.out.println(emps.size());
-		
+
 		for (Emp emp : emps) {
 			System.out.println(emp);
 		}
 	}
-	
+
 	@Test
 	public void testCount() {
 		int count = empDao.count();
