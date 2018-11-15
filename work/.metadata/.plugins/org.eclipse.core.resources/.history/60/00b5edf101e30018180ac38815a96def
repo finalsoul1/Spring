@@ -1,7 +1,0 @@
-package com.example.demo.replacer;
-
-@Data
-public class Magician {
-	private MagicBox box;
-
-}

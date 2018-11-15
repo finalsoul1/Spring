@@ -1,5 +1,0 @@
-package com.example.demo.ioc.reviewanno;
-
-public interface Employee {
-	public void work();
-}

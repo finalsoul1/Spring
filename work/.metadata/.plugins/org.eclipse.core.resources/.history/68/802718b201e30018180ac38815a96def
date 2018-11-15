@@ -1,7 +1,0 @@
-package com.example.demo.replacer;
-
-import org.springframework.beans.factory.support.MethodReplacer;
-
-public class MyReplacer implements MethodReplacer {
-
-}

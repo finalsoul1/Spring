@@ -1,5 +1,0 @@
-package com.example.demo.ioc.step2;
-
-public class CarMaker {
-	public Car sell(Money money);
-}
