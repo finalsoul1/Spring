@@ -89,17 +89,12 @@ public class EmpDaoImpl implements EmpDao {
 		 *	1. 빈 문자열을 null로 바꾼다.
 		 *	2. 매퍼 xml에서 if 조건에 빈 문자열도 테스트한다.
 		 */
-		System.out.println(map);
 		
 		map.forEach((key, value) -> {
 			if("".equals(value)) {
 				map.put(key, null);
 			}
 		});
-		
-		System.out.println(map);
-		System.out.println(map.get("job") == null); // false
-		System.out.println(map.get("job") instanceof String); // true
 		
 		return session.selectList("com.example.demo.dao.EmpDao.search", map);
 	}

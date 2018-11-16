@@ -93,7 +93,7 @@
 	
 	<!-- CONCAT('%', #{ename}, '%') -->
 	<!-- 디비에선 '' 안붙이면 모두 숫자 -->
-	<select id="search" >
+	<select id="search" resultMap="empRowMapper">
 			select * from emp 
 			where 
 			<if test="ename != null">
