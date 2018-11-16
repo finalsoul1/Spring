@@ -60,4 +60,20 @@ public class EmpDaoImplTest {
 		emps.forEach(System.out::println);
 	}
 	
+	@Test
+	public void testFindPageSize() {
+		int page = 1;
+		int size = 10;
+		List<Emp> emps = dao.findPageSize(page, size);
+		emps.forEach(System.out::println);
+	}
+	
+	@Test
+	public void testFindStartEnd() {
+		int start = 21;
+		int end = 30;
+		List<Emp> emps = dao.findStartEnd(start, end);
+		emps.forEach(System.out::println);
+	}
+	
 }

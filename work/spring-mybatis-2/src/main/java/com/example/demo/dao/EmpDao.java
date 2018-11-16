@@ -1,11 +1,9 @@
 package com.example.demo.dao;
 
 import java.util.List;
+import java.util.Map;
 
 import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Result;
-import org.apache.ibatis.annotations.Results;
-import org.apache.ibatis.annotations.Select;
 
 import com.example.demo.domain.Emp;
 
@@ -43,4 +41,15 @@ public interface EmpDao {
 	 * ceil(21/10) = 3
 	 */
 	public List<Emp> findPageSize(int page, int size);
+	
+	// ename, job, sal 칼럼으로 검색하는 기능의 메소드를 제공하고 싶다.
+	// SELECT * FROM EMP where ename like '%길동%'
+	// SELECT * FROM EMP where job like '%적%'
+	// SELECT * FROM EMP where sal>=800 and sal<=900
+	// SELECT * FROM EMP where sal>=800 
+	// SELECT * FROM EMP where sal>=800 
+	
+	public List<Emp> search(Map<String, String> map);
+	
+	
 }

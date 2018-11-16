@@ -7,3 +7,5 @@ Handler Mapping : Controller의 리퀘스트매핑 어노테이션들을 리스트로 갖고있다가 �
 ModelAndView : 스프링이 미리 만들어놓은 데이터전송용 객체
 
 ViewResolver : 뷰문자열이 들어오면 맞는 jsp를 찾아줌
+
+

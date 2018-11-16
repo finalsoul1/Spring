@@ -136,4 +136,11 @@
 		<item value="org.springsource.sts.package:3.9.6.201809180749-RELEASE-e49"/>
 		<item value="org.springsource.sts:3.9.6.201809180749-RELEASE"/>
 	</list>
+	<section name="CleanDialogSettings">
+		<item value="500" key="DIALOG_WIDTH"/>
+		<item value="true" key="TOGGLE_SELECTED"/>
+		<item value="402" key="DIALOG_HEIGHT"/>
+		<item value="710" key="DIALOG_X_ORIGIN"/>
+		<item value="252" key="DIALOG_Y_ORIGIN"/>
+	</section>
 </section>

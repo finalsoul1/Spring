@@ -53,21 +53,55 @@ public class EmpDaoImpl implements EmpDao {
 
 	@Override
 	public List<Emp> findStartEnd(int start, int end) {
-		return null;
+		Map<String, Integer> map = new HashMap<>();
+		map.put("start", start);
+		map.put("end", end); 
+		
+		return session.selectList("com.example.demo.dao.EmpDao.findStartEnd", map);	
 	}
 
 	@Override
 	public List<Emp> findSkipLimit(int skip, int limit) {
 		Map<String, Integer> map = new HashMap<>();
 		map.put("skip", skip);
-		map.put("limit", limit);
+		map.put("limit", limit); // 개수
 		
 		return session.selectList("com.example.demo.dao.EmpDao.findSkipLimit", map);		
 	}
 
 	@Override
 	public List<Emp> findPageSize(int page, int size) {
-		return null;
+		int skip = 0;
+		if(page > 0) {
+			skip = (page - 1) * size;
+		}
+		
+		Map<String, Integer> map = new HashMap<>();
+		map.put("skip", skip);
+		map.put("limit", size); // 개수
+		
+		return session.selectList("com.example.demo.dao.EmpDao.findPageSize", map);
+	}
+
+	@Override
+	public List<Emp> search(Map<String, String> map) {
+		/*
+		 *	1. 빈 문자열을 null로 바꾼다.
+		 *	2. 매퍼 xml에서 if 조건에 빈 문자열도 테스트한다.
+		 */
+		System.out.println(map);
+		
+		map.forEach((key, value) -> {
+			if("".equals(value)) {
+				map.put(key, null);
+			}
+		});
+		
+		System.out.println(map);
+		System.out.println(map.get("job") == null); // false
+		System.out.println(map.get("job") instanceof String); // true
+		
+		return session.selectList("com.example.demo.dao.EmpDao.search", map);
 	}
 	
 	

@@ -93,17 +93,21 @@
 	
 	<!-- CONCAT('%', #{ename}, '%') -->
 	<!-- 디비에선 '' 안붙이면 모두 숫자 -->
-	<select id="search" >
-			select * from emp 
-			where 
-			<if test="ename != null">
-				ename like CONCAT('%',#{ename},'%')</if>
-			<if test="job != null">
-				and job like CONCAT('%',#{job},'%')</if>
-			<if test="salMin != null and salMax != null">				
-				and sal <![CDATA[>=]]> #{salMin} 
-				and sal <![CDATA[<=]]> #{salMax}				
-			</if>
-	</select>
+  <select id="search" resultMap="empRowMapper">
+
+      select * from emp 
+      where 
+      <if test="ename != null">
+         ename like CONCAT('%',#{ename},'%')
+      </if>
+      <if test="job != null">
+         and job like  CONCAT('%',#{job},'%')
+      </if>
+      <if test="salMin != null and salMax != null">
+         and sal <![CDATA[>=]]>  #{salMin,jdbcType=INTEGER}  and sal <![CDATA[<=]]> #{salMax,jdbcType=INTEGER}
+      </if>
+      order by empno asc
+   </select>
+	
 	
 </mapper>
