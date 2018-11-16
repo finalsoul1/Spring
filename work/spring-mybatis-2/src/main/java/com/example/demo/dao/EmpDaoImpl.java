@@ -98,6 +98,16 @@ public class EmpDaoImpl implements EmpDao {
 		
 		return session.selectList("com.example.demo.dao.EmpDao.search", map);
 	}
+
+	@Override
+	public List<Emp> findByPageSizeUsingBind(int page, int size) {
+		
+		Map<String, Integer> map = new HashMap<>();
+		map.put("page", page);
+		map.put("size", size); 
+		
+		return session.selectList("com.example.demo.dao.EmpDao.findByPageSizeUsingBind", map);
+	}
 	
 	
 }

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aop-reference-model>
-<aop-project name="spring-mvc-3"/>
-<aop-project name="spring-mybatis-1"/>
-<aop-project name="spring-mybatis-2"/>
+<aop-project name="spring-boot-mybatis-board-h2"/>
+<aop-project name="spring-boot-mybatis-board-oracle"/>
+<aop-project name="spring-legacy-mybatis-board-oracle"/>
 </aop-reference-model>

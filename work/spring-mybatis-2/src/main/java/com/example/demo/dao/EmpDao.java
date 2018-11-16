@@ -8,7 +8,6 @@ import org.apache.ibatis.annotations.Mapper;
 import com.example.demo.domain.Emp;
 
 
-@Mapper
 public interface EmpDao {
 	
 	public int insert(Emp emp);
@@ -41,6 +40,9 @@ public interface EmpDao {
 	 * ceil(21/10) = 3
 	 */
 	public List<Emp> findPageSize(int page, int size);
+	
+	// bind 사용예제
+	public List<Emp> findByPageSizeUsingBind(int page, int size);
 	
 	// ename, job, sal 칼럼으로 검색하는 기능의 메소드를 제공하고 싶다.
 	// SELECT * FROM EMP where ename like '%길동%'

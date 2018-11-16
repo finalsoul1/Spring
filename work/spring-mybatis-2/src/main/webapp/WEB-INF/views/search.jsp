@@ -38,8 +38,7 @@
 
 				<tr>
 					<th>Salary</th>
-					<td><input type="number" name="salMin" min="0"> ~ <input
-						type="number" name="salMax" min="0"></td>
+					<td><input type="number" name="salMin" min="0"> ~ <input type="number" name="salMax" min="0"></td>
 				</tr>
 
 				<tr>
